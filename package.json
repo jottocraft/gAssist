@@ -1,0 +1,23 @@
+{
+  "name": "gAssist",
+  "version": "1.0.0",
+  "description": "A Google Assistant client for Windows",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/jottocraft/gAssist",
+  "author": "jottocraft",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "electron": "7.0.0"
+  },
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.4",
+    "google-auth-library": "^6.0.0",
+    "google-proto-files": "^2.0.0",
+    "google-protobuf": "^3.12.1",
+    "grpc": "^1.24.2",
+    "nodejs-assistant": "^0.8.0"
+  }
+}

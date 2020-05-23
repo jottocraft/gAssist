@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Electron modules start -->
+  <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+  <script>fluidAutoLoad = false;</script>
+
+  <!-- Fluid UI -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Extended" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="https://cdn.jottocraft.com/fluid/v4.min.css" media="screen,projection" />
+  <script async src="https://cdn.jottocraft.com/fluid/assets/tinycolor.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jottocraft.com/fluid/v4.min.js"></script>
+
+  <!-- gAssist scripts & css -->
+  <script src="assistant.js"></script>
+  <script src="renderer.js"></script>
+  <link type="text/css" rel="stylesheet" href="renderer.css" media="screen,projection" />
+
+  <!-- Electron modules end -->
+  <script>if (window.module) module = window.module;</script>
+
+  <!-- metadata -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Title, author, description -->
+  <title>gAssist</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <meta name="author" content="jottocraft">
+
+
+</head>
+
+
+<body class="dark">
+  <div id="rootContainer">
+    <div id="topbar">
+      <h5>
+        <i class="material-icons assistantIcon">google_assistant</i>
+        gAssist
+        <i onclick="window.close();" class="material-icons close">close</i>
+      </h5>
+    </div>
+
+    <div id="content">
+      <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

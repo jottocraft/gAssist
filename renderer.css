@@ -1,0 +1,226 @@
+html, body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent !important;
+}
+
+#rootContainer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px !important;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+#topbar {
+    padding: 10px 20px;
+    height: 70px;
+}
+
+#topbar h5 {
+    vertical-align: middle;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#topbar i {
+    vertical-align: middle;
+}
+
+#topbar .assistantIcon {
+    margin-right: 5px;
+}
+
+#topbar .close {
+    float: right;
+    cursor: pointer;
+}
+
+#content {
+    padding: 20px;
+    overflow: auto;
+    /* 90px top, 90px at bottom, 10px padding */
+    max-height: calc(100vh - 90px - 90px - 10px);
+}
+
+.message {
+    margin: 40px 0px;
+}
+
+.message:nth-child(1) {
+    margin-top: 0px;
+}
+
+.message p {
+    display: inline-block;
+    border-radius: 20px;
+    margin: 0px;
+    padding: 10px 14px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.message.user {
+    text-align: right;
+}
+
+.message.assistant.text p {
+    border: 2px solid var(--elements);
+}
+
+.message.assistant.screen {
+    padding: 28px 10px;
+    box-shadow: var(--lightShadow);
+    background-color: var(--cards);
+    border-radius: 20px;
+}
+
+.message.assistant iframe.screen {
+    border: none;
+    outline: none;
+    width: 250%;
+    height: 500px;
+    transform: scale(0.4);
+    margin: -150px -75%;
+}
+
+.message.user p {
+    background: var(--elements);
+    border: 2px solid var(--elements);
+}
+
+#inputFooter {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    height: 90px;
+    width: calc(100vw - 40px);
+}
+
+#inputFooter input {
+    width: 100%;
+    margin: 0px;
+}
+
+#inputSuggestions {
+  white-space: nowrap;
+  overflow: auto;
+  margin-bottom: 12px;
+  height: 30px;
+}
+
+#inputSuggestions p {
+  display: inline-block;
+  margin: 0px 3px;
+  padding: 5px 10px;
+  border: 2px solid var(--elements);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: var(--trans);
+}
+
+#inputSuggestions p:hover {
+  background-color: var(--elements);
+}
+
+#inputSuggestions::-webkit-scrollbar {
+  display: none;
+}
+
+/* Spinkit */
+.spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  
+  -webkit-animation: sk-rotate 2.0s infinite linear;
+  animation: sk-rotate 2.0s infinite linear;
+}
+
+.dot1, .dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: var(--secText);
+  border-radius: 100%;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+.thinkingSpinner {
+  width: 70px;
+  text-align: center;
+}
+
+.thinkingSpinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: var(--secText);
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.thinkingSpinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.thinkingSpinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
